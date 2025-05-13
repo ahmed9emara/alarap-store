@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar"> <!-- Changed to Arabic for consistency -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alarap Store | Connect With Us</title>
+    <title>Alarap Store | تواصلوا معنا</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -15,17 +15,16 @@
         body {
             font-family: 'Cairo', sans-serif;
             background: linear-gradient(135deg, #1c2526 0%, #2e2e2e 100%);
-            min-height: 100vh;
+            height: auto; /* Prevent content cutoff */
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* Start from top */
             direction: rtl;
             color: #e0e0e0;
             position: relative;
-            overflow: hidden;
+            overflow-y: auto; /* Allow scrolling */
         }
 
-        /* Subtle golden glow in background */
         body::before {
             content: '';
             position: absolute;
@@ -42,12 +41,12 @@
             max-width: 90%;
             width: 100%;
             margin: 20px auto;
-            background: rgba(33, 33, 33, 0.7); /* Semi-transparent for glass effect */
-            backdrop-filter: blur(10px); /* Glassmorphism blur */
-            -webkit-backdrop-filter: blur(10px); /* Safari support */
+            background: rgba(33, 33, 33, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border-radius: 12px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(184, 150, 46, 0.3); /* Golden border */
+            border: 1px solid rgba(184, 150, 46, 0.3);
             overflow: hidden;
             text-align: center;
             position: relative;
@@ -57,11 +56,11 @@
         .header {
             background: linear-gradient(90deg, #b8962e, #8b6f47);
             background-image: url('logo.png');
-            background-size: cover;
+            background-size: contain; /* Adjusted for tall, narrow logo */
             background-position: center;
             background-repeat: no-repeat;
-            opacity: 0.5;
-            padding: 25px 20px;
+            opacity: 0.8; /* Clearer logo */
+            padding: 40px 20px; /* More space for tall logo */
             color: #fff;
             position: relative;
         }
@@ -102,7 +101,7 @@
             justify-content: center;
             text-decoration: none;
             color: #e0e0e0;
-            background: rgba(51, 51, 51, 0.8); /* Slightly darker glass effect for buttons */
+            background: rgba(51, 51, 51, 0.8);
             backdrop-filter: blur(5px);
             -webkit-backdrop-filter: blur(5px);
             margin: 12px 0;
@@ -118,7 +117,7 @@
             background: #b8962e;
             color: #212121;
             transform: translateY(-2px);
-            backdrop-filter: none; /* Remove blur on hover for contrast */
+            backdrop-filter: none;
         }
 
         .links a img {
@@ -127,7 +126,22 @@
             margin-left: 8px;
         }
 
+        .links a img.store-icon {
+            width: 32px; /* Larger size for Store icon */
+            height: 32px;
+            margin-left: 8px;
+        }
+
+        .links a img.phone-icon, .links a img.tiktok-icon {
+            width: 24px;
+            height: 24px;
+            margin-left: 8px;
+        }
+
         @media (max-width: 600px) {
+            .header {
+                padding: 30px 15px;
+            }
             .header h1 {
                 font-size: 1.4rem;
             }
@@ -142,6 +156,14 @@
                 width: 20px;
                 height: 20px;
             }
+            .links a img.store-icon {
+                width: 28px; /* Adjusted for small screens */
+                height: 28px;
+            }
+            .links a img.phone-icon, .links a img.tiktok-icon {
+                width: 20px;
+                height: 20px;
+            }
         }
     </style>
 </head>
@@ -149,17 +171,17 @@
     <div class="container">
         <div class="header">
             <h1>Alarap Store</h1>
-            <p>Connect with us on all platforms</p>
+            <p>تواصلوا معنا على جميع المنصات</p>
         </div>
         <div class="links">
             <a href="tel:+201030888000">
-                  201030888000+ Phone
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Telephone_icon.svg" alt="Phone" class="phone-icon"> اتصل بنا
             </a>
             <a href="https://wa.me/+201030888000" target="_blank">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> WhatsApp
             </a>
             <a href="https://www.alarap.com" target="_blank">
-                <img src="store-icon.png" alt="Alarap Store"> Store
+                <img src="store-icon.png" alt="Alarap Store" class="store-icon"> المتجر
             </a>
             <a href="https://instagram.com/alarap.store" target="_blank">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"> Instagram
@@ -168,7 +190,7 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"> Facebook
             </a>
             <a href="https://tiktok.com/@alarap.store" target="_blank">
-                 TikTok
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/TikTok_logo.svg" alt="TikTok" class="tiktok-icon"> TikTok
             </a>
             <a href="https://youtube.com/@alarapstore" target="_blank">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube"> YouTube
